@@ -1,0 +1,6 @@
+
+Gcsharpsquid:S11254"*Remove the unnecessary Boolean literal(s).(’ËÁÌ
+Lcsharpsquid:S1125="*Remove the unnecessary Boolean literal(s).(‡¢•¯úÿÿÿÿ
+9csharpsquid:S1643G"Use a StringBuilder instead.(–™¢ö
+>csharpsquid:S1643H"Use a StringBuilder instead.(¼¹ìÌùÿÿÿÿ
+lcsharpsquid:S3241&"JChange return type to 'void'; not a single caller uses the returned value.(Öœ§Èùÿÿÿÿ
