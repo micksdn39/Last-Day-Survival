@@ -17,8 +17,10 @@ namespace Core.Scene
             Gameplay = 3, 
         } 
        [SerializeField] public GameSceneType sceneType { get; private set; }
-       [SerializeField] public AssetReference sceneReference { get; private set; } 
-     
+       [SerializeField] public AssetReference sceneReference { get; private set; }
+
+       private string sceneName => sceneReference.Asset.name;
+
        public void LoadSceneAdditive(Action callback=null)
        {
            UiHelpers.KillAllButton();
@@ -36,10 +38,7 @@ namespace Core.Scene
                if(callback!=null)
                    callback?.Invoke();
            };  
-       }  
-       public bool IsCurrentScene(SceneSO sceneSo)
-       {
-           return SceneManager.GetActiveScene().name == sceneSo.sceneReference.editorAsset.name;
        }
+
     }
 } 
