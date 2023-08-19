@@ -20,21 +20,14 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: availableItem
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[LDS.Inventory.Item.ItemSO, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  availableItem: []
+    SerializationNodes: []
+  availableItem:
+  - {fileID: 11400000, guid: 41ef720d817fbf64e9a3e3b699e20608, type: 2}
+  - {fileID: 11400000, guid: ae955eacad5df784b9731229362ecb99, type: 2}
+  - {fileID: 11400000, guid: 26ec91a71bcffa34a93dcf9085ead01f, type: 2}
+  - {fileID: 11400000, guid: f48b752b9210cf5448a21ded8aeec9f5, type: 2}
+  - {fileID: 11400000, guid: 2b39b43535a73254c86bfc264db27be6, type: 2}
+  - {fileID: 11400000, guid: e19fb70c0f4af014c94947c8191ccaa4, type: 2}
   folderPath:
   - Assets/ScriptableObjects/Currency
   - Assets/ScriptableObjects/Equipment
