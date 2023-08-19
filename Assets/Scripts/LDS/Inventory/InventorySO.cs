@@ -1,18 +1,21 @@
 using System;
 using System.Collections.Generic;
+using LDS.Data;
 using LDS.Inventory.Item;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace LDS.Inventory
 {
     [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory")] 
     public class InventorySO : SerializedScriptableObject
-    {
+    { 
         [OdinSerialize] public List<ItemStack> items { get; private set; } = new List<ItemStack>();
         [OdinSerialize] public List<ItemStack> defaultItems { get; private set; }  = new List<ItemStack>();
-        
+ 
+        [Button]
         public void Init()
         {
             if (items == null)
@@ -24,8 +27,7 @@ namespace LDS.Inventory
             {
                 items.Add(new ItemStack(item));
             }
-        }
-
+        }  
         public void Add(ItemSO item, int count = 1)
         {
             if (count <= 0)
@@ -35,7 +37,7 @@ namespace LDS.Inventory
             {
                 if (item == currentItemStack.item)
                 {
-                    currentItemStack.Add(count);
+                    currentItemStack.SetQuantity(count);
                     return;
                 }
             } 
@@ -76,6 +78,8 @@ namespace LDS.Inventory
     {
         [OdinSerialize] public ItemSO item { get; private set; } 
         [OdinSerialize] public int quantity { get; private set; }
+
+        public int itemId => item.itemId;
         
         public ItemStack()
         {
@@ -92,6 +96,10 @@ namespace LDS.Inventory
             this.item = item;
             this.quantity = quantity;
         } 
+        public void SetQuantity(int quantity)
+        {
+            this.quantity = quantity;
+        }
         public void Add(int quantity)
         {
             this.quantity += quantity;

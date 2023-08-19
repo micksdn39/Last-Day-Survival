@@ -24,5 +24,10 @@ namespace LDS.Inventory.Item
     {
         [OdinSerialize] public EquipmentType equipmentType { get; private set; }
         [OdinSerialize] public Rarity rarity { get; private set; } 
+        
+        public EquipmentSO()
+        {
+            ItemType = ItemType.Equipment;
+        } 
     }
 }

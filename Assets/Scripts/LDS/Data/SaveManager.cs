@@ -1,41 +1,46 @@
 using System;
+using System.Collections.Generic;
 using Core;
 using LDS.Inventory;
+using LDS.Inventory.Item;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace LDS.Data
 {
     public class SaveManager : SerializedMonoBehaviour
     {
         [SerializeField] private string saveFilename = "LDS_Save";
+        [SerializeField] private ItemDB itemDB; 
         [SerializeField] private InventorySO inventory;
-        
-        [OdinSerialize,ReadOnly] private GameData gameData = null;
 
-        [HideInInspector] public Action<GameData> onSaveGame;
-        [HideInInspector] public Action<GameData> onLoadGame;
+        [OdinSerialize, ReadOnly] private GameData gameData;
+
+        [HideInInspector] public UnityAction onSaveGame; 
+        [HideInInspector] public UnityAction<GameData> onLoadGame;
   
-        [Button]
-        public void NewGameTest()
-        { 
-            CheckFileSave();
-            gameData.NewData(); 
-        }
         [Button]
         public void SaveGame()
         {
-            CheckFileSave();
+            CheckGameData();
+            
+            SaveInventory();
             gameData.SaveJson(saveFilename); 
-            onSaveGame?.Invoke(gameData);
+            onSaveGame?.Invoke();
         }
         [Button]
         public void LoadSave()
-        { 
-            CheckFileSave();
-            gameData.LoadJson(saveFilename);
-            onLoadGame?.Invoke(gameData);
+        {
+            CheckGameData();
+            
+            void LoadComplete()
+            {
+                LoadInventory();
+                onLoadGame?.Invoke(gameData);
+            } 
+            gameData.LoadJson(saveFilename,LoadComplete);
         }
         [Button]
         public void OpenURL()
@@ -44,14 +49,29 @@ namespace LDS.Data
             LogCtrl.Debug(gameData.ToString());
         }
 
-        private void UpdateInventory()
+        private void LoadInventory()
         {
-             
+            foreach (var item in gameData.itemData)
+            {
+                var i= itemDB.GetItem(item.itemId);
+                if(i != null)
+                    inventory.Add(i,item.quantity); 
+            }
+        } 
+        private void SaveInventory()
+        {
+            GameData g = new GameData(); 
+            foreach (var item in inventory.items)
+            {
+                g.itemData.Add(new ItemData(item.itemId,item.quantity));
+            }
+            gameData.SaveData(g);
         }
-        private void CheckFileSave()
+
+        private void CheckGameData()
         {
             if (gameData != null)
-                return;
+                return; 
             gameData = new GameData();
             LogCtrl.Debug("New Game Data");
         }

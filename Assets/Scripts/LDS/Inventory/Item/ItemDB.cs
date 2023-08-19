@@ -10,7 +10,7 @@ using UnityEngine;
 namespace LDS.Inventory.Item
 {    
     [CreateAssetMenu(fileName = "ItemData", menuName = "Item/All")] 
-    public class AllItemSO : SerializedScriptableObject
+    public class ItemDB : SerializedScriptableObject
     {
         [SerializeField] public List<ItemSO> availableItem = new List<ItemSO>();
 
@@ -19,6 +19,14 @@ namespace LDS.Inventory.Item
         private readonly string metaFile = "meta";
         private readonly string assetFile = "asset";
 
+        public ItemSO GetItem(int itemId)
+        {
+            var item = availableItem.Find(x => x.itemId == itemId);
+            if(item == null)
+                LogCtrl.Error($"ItemID {itemId} Not Found!");
+            return availableItem.Find(x => x.itemId == itemId);
+        }
+        
 #if UNITY_EDITOR 
         [Button]
         public void LoadAllItem()

@@ -20,6 +20,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ae955eacad5df784b9731229362ecb99, type: 2}
     - {fileID: 11400000, guid: e19fb70c0f4af014c94947c8191ccaa4, type: 2}
     - {fileID: 11400000, guid: 2b39b43535a73254c86bfc264db27be6, type: 2}
+    - {fileID: 11400000, guid: f48b752b9210cf5448a21ded8aeec9f5, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -31,23 +32,10 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: defaultItems
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[LDS.Inventory.ItemStack, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 7
-      Data: 2|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 1|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 0
@@ -59,7 +47,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 2|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 1
@@ -71,7 +59,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 3|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 2
@@ -83,13 +71,98 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 4|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 3
     - Name: quantity
       Entry: 3
       Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|LDS.Inventory.ItemStack, Assembly-CSharp
+    - Name: item
+      Entry: 10
+      Data: 4
+    - Name: quantity
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultItems
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[LDS.Inventory.ItemStack, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 7|LDS.Inventory.ItemStack, Assembly-CSharp
+    - Name: item
+      Entry: 10
+      Data: 0
+    - Name: quantity
+      Entry: 3
+      Data: 10000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|LDS.Inventory.ItemStack, Assembly-CSharp
+    - Name: item
+      Entry: 10
+      Data: 1
+    - Name: quantity
+      Entry: 3
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|LDS.Inventory.ItemStack, Assembly-CSharp
+    - Name: item
+      Entry: 10
+      Data: 2
+    - Name: quantity
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|LDS.Inventory.ItemStack, Assembly-CSharp
+    - Name: item
+      Entry: 10
+      Data: 3
+    - Name: quantity
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|LDS.Inventory.ItemStack, Assembly-CSharp
+    - Name: item
+      Entry: 10
+      Data: 4
+    - Name: quantity
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

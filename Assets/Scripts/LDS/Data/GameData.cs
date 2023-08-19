@@ -1,5 +1,5 @@
+using System;
 using System.Collections.Generic;
-using Core;
 using Core.UtilitySO;
 using UnityEngine;
 
@@ -8,27 +8,24 @@ namespace LDS.Data
     [System.Serializable]
     public class GameData
     {
-        [SerializeField] public List<ItemData> itemData { get; private set; } 
-   
-        public void NewData()
-        { 
-            itemData = new List<ItemData>
-            {
-                new ItemData(1, 100000),
-                new ItemData(2, 1000000)
-            };
-        }
+        [SerializeField] public List<ItemData> itemData { get; private set; }
+
+        public GameData()
+        {
+            itemData = new List<ItemData>();
+        } 
         public void SaveJson(string saveName)
         {
             FileManager.SaveToDisk(this,saveName);
         } 
-        public void LoadJson(string saveName)
+        public void LoadJson(string saveName,Action onComplete=null)
         {
             GameData GameData = FileManager.LoadFromDisk<GameData>(saveName);
-            LogCtrl.Debug(GameData.itemData.Count.ToString());
-            SaveSettings(GameData);
+            SaveData(GameData);
+            if(onComplete!=null)
+                onComplete?.Invoke(); 
         } 
-        private void SaveSettings(GameData gameData)
+        public void SaveData(GameData gameData)
         {
             this.itemData = gameData.itemData; 
         }  

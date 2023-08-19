@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fce1334189580f04bb1869f084ee935f, type: 3}
-  m_Name: AvailableItem
+  m_Name: ItemDB
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2

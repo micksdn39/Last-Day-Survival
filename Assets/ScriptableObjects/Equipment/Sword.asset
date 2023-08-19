@@ -15,27 +15,29 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: ItemType
+      Entry: 3
+      Data: 3
     - Name: itemIcon
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: itemName
       Entry: 1
       Data: Sword
     - Name: itemId
       Entry: 3
       Data: 1000
-    - Name: itemDescription
-      Entry: 6
-      Data: 
     - Name: equipmentType
       Entry: 3
       Data: 0
     - Name: rarity
       Entry: 3
-      Data: 1
+      Data: 0
+  itemDescription: Basic Sword
