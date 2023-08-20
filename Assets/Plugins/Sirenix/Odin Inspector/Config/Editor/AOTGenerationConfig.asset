@@ -16,5 +16,63 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 0
-  supportSerializedTypes: []
+  lastScan: 638281533866371213
+  supportSerializedTypes:
+  - TypeName: LDS.Inventory.Item.EquipmentType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Single, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: LDS.Data.GameData, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Core.Scene.GameSceneType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Int32, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: LDS.Data.ItemData, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: LDS.GamePlay.ItemDropInfo, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: LDS.Inventory.Item.ItemSO, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: LDS.Inventory.ItemStack, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: LDS.Inventory.Item.ItemType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[LDS.Data.ItemData, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[LDS.GamePlay.ItemDropInfo, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[LDS.Inventory.ItemStack, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: LDS.Inventory.Item.Rarity, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Sprite, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.String, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Events.UnityAction, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Events.UnityAction`1[[LDS.Data.GameData, Assembly-CSharp]],
+      UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1

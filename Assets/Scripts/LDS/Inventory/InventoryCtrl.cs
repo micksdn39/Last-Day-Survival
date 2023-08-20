@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using LDS.Inventory.Item;
 using LDS.UI;
@@ -20,6 +21,14 @@ namespace LDS.Inventory
         [SerializeField] private InventoryItemTab prefabInventoryItemTab;
         [SerializeField] private Transform contentInventoryItemTab;
         [SerializeField] private List<InventoryItemTab> listOfInventoryItemTabs;
+
+        private void OnDestroy()
+        {
+            foreach (var inventoryTab in listOfInventoryItemTabs)
+            { 
+                inventoryTab.OnClickItemTab -= OnClickItemTab;
+            }
+        }
 
         public void InitPanel()
         {

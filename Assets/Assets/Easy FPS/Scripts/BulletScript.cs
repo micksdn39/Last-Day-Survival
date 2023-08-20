@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using LDS.Enemy;
 
 public class BulletScript : MonoBehaviour {
 
@@ -29,6 +30,9 @@ public class BulletScript : MonoBehaviour {
 					Destroy(gameObject);
 				}
 				if(hit.transform.tag == "Dummie"){
+					hit.transform.gameObject.TryGetComponent(out Enemy enemy);
+					if(enemy!= null)
+						enemy.OnHit(10);
 					Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
 					Destroy(gameObject);
 				}

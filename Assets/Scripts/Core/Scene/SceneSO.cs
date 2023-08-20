@@ -1,5 +1,6 @@
 using System;
 using Core.UtilitySO;
+using EasyTransition;
 using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -20,6 +21,7 @@ namespace Core.Scene
     {
         [OdinSerialize] public GameSceneType sceneType { get; private set; }
         [SerializeField] private AssetReference sceneReference;
+        [SerializeField] private TransitionSettings transition;
 
        private string sceneName => sceneReference.Asset.name;
 
@@ -41,6 +43,25 @@ namespace Core.Scene
                    callback?.Invoke();
            };  
        }
+       public void LoadSceneTransition(Action callback=null)
+       { 
+           TransitionManager.Instance().onTransitionBegin += UiHelpers.KillAllButton;
 
+           TransitionManager.Instance().onTransitionCutPointReached += Load;
+           
+           TransitionManager.Instance().onTransitionEnd += () =>
+           {
+               TransitionManager.Instance().onTransitionCutPointReached -= Load;
+               if(callback!=null)
+                   callback?.Invoke();
+           }; 
+           
+           TransitionManager.Instance().Transition(transition, 0);
+
+           void Load()
+           {
+               sceneReference.LoadSceneAsync();  
+           }
+       }
     }
 } 

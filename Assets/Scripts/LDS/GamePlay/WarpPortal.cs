@@ -11,7 +11,7 @@ namespace LDS.GamePlay
             if (!other.gameObject.CompareTag("Player"))
                 return;
             
-            sceneLoad.LoadScene();
+            sceneLoad.LoadSceneTransition();
         }
     }
 }

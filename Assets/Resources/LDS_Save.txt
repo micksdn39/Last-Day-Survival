@@ -1,0 +1,28 @@
+{
+  "itemData": [
+    {
+      "itemId": 1,
+      "quantity": 10012
+    },
+    {
+      "itemId": 2,
+      "quantity": 100
+    },
+    {
+      "itemId": 101,
+      "quantity": 21
+    },
+    {
+      "itemId": 100,
+      "quantity": 13
+    },
+    {
+      "itemId": 1000,
+      "quantity": 1
+    },
+    {
+      "itemId": 1001,
+      "quantity": 1
+    }
+  ]
+}

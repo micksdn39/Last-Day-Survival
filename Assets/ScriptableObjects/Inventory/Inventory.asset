@@ -21,6 +21,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e19fb70c0f4af014c94947c8191ccaa4, type: 2}
     - {fileID: 11400000, guid: 2b39b43535a73254c86bfc264db27be6, type: 2}
     - {fileID: 11400000, guid: f48b752b9210cf5448a21ded8aeec9f5, type: 2}
+    - {fileID: 11400000, guid: 26ec91a71bcffa34a93dcf9085ead01f, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -32,7 +33,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 7
       Data: 1|LDS.Inventory.ItemStack, Assembly-CSharp
@@ -41,7 +42,7 @@ MonoBehaviour:
       Data: 0
     - Name: quantity
       Entry: 3
-      Data: 10000
+      Data: 10006
     - Name: 
       Entry: 8
       Data: 
@@ -65,7 +66,7 @@ MonoBehaviour:
       Data: 2
     - Name: quantity
       Entry: 3
-      Data: 10
+      Data: 17
     - Name: 
       Entry: 8
       Data: 
@@ -77,7 +78,7 @@ MonoBehaviour:
       Data: 3
     - Name: quantity
       Entry: 3
-      Data: 10
+      Data: 12
     - Name: 
       Entry: 8
       Data: 
@@ -94,6 +95,18 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 6|LDS.Inventory.ItemStack, Assembly-CSharp
+    - Name: item
+      Entry: 10
+      Data: 5
+    - Name: quantity
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -101,14 +114,14 @@ MonoBehaviour:
       Data: 
     - Name: defaultItems
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[LDS.Inventory.ItemStack, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[LDS.Inventory.ItemStack, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
       Entry: 7
-      Data: 7|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 8|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 0
@@ -120,7 +133,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 9|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 1
@@ -132,7 +145,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 10|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 2
@@ -144,7 +157,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 11|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 3
@@ -156,7 +169,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 11|LDS.Inventory.ItemStack, Assembly-CSharp
+      Data: 12|LDS.Inventory.ItemStack, Assembly-CSharp
     - Name: item
       Entry: 10
       Data: 4
@@ -171,4 +184,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: OnInventoryUpdate
+      Entry: 6
       Data: 

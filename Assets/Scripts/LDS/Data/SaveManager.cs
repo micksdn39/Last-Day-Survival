@@ -20,7 +20,17 @@ namespace LDS.Data
 
         [HideInInspector] public UnityAction onSaveGame; 
         [HideInInspector] public UnityAction<GameData> onLoadGame;
-  
+
+        private void Start()
+        {
+            LoadSave();
+            inventory.OnInventoryUpdate += SaveGame;
+        }
+        private void OnDestroy()
+        {
+            SaveGame();
+            inventory.OnInventoryUpdate -= SaveGame;
+        }
         [Button]
         public void SaveGame()
         {
@@ -55,7 +65,7 @@ namespace LDS.Data
             {
                 var i= itemDB.GetItem(item.itemId);
                 if(i != null)
-                    inventory.Add(i,item.quantity); 
+                    inventory.UpdateInventory(i,item.quantity); 
             }
         } 
         private void SaveInventory()

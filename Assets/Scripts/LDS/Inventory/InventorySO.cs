@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Core;
 using LDS.Data;
 using LDS.Inventory.Item;
 using Sirenix.OdinInspector;
@@ -14,7 +15,15 @@ namespace LDS.Inventory
     { 
         [OdinSerialize] public List<ItemStack> items { get; private set; } = new List<ItemStack>();
         [OdinSerialize] public List<ItemStack> defaultItems { get; private set; }  = new List<ItemStack>();
- 
+
+        public UnityAction OnInventoryUpdate;
+
+        [Button]
+        public void ResetInventoryUpdate()
+        {
+            OnInventoryUpdate = null;
+        }
+
         [Button]
         public void Init()
         {
@@ -27,12 +36,34 @@ namespace LDS.Inventory
             {
                 items.Add(new ItemStack(item));
             }
+            OnInventoryUpdate?.Invoke();
         }  
         public void Add(ItemSO item, int count = 1)
         {
             if (count <= 0)
                 return;
 
+            LogCtrl.Debug($"Add item: {item.itemName} quantity = {count}");
+            
+            foreach (var currentItemStack in items)
+            {
+                if (item == currentItemStack.item)
+                {
+                    currentItemStack.Add(count);
+                    OnInventoryUpdate?.Invoke();
+                    return;
+                }
+            } 
+            items.Add(new ItemStack(item, count));
+            OnInventoryUpdate?.Invoke();
+        }
+        public void UpdateInventory(ItemSO item, int count = 1)
+        {
+            if (count <= 0)
+                return;
+
+            LogCtrl.Debug($"Update item: {item.itemName} quantity = {count}");
+            
             foreach (var currentItemStack in items)
             {
                 if (item == currentItemStack.item)
@@ -42,8 +73,8 @@ namespace LDS.Inventory
                 }
             } 
             items.Add(new ItemStack(item, count));
+            OnInventoryUpdate?.Invoke();
         }
-
         public void Remove(ItemSO item, int count = 1)
         {
             if (count <= 0)
@@ -59,6 +90,7 @@ namespace LDS.Inventory
                     items.Remove(currentItemStack); 
                 return;
             }  
+            OnInventoryUpdate?.Invoke();
         }
 
         public bool Contains(ItemSO item)

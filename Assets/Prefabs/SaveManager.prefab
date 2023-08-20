@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7728428294835053571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6031089455050997370}
+  - component: {fileID: 1393827455766608400}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6031089455050997370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728428294835053571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1393827455766608400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728428294835053571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b94046e2d6ff449b48dc3c719d6ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: gameData
+      Entry: 7
+      Data: 0|LDS.Data.GameData, Assembly-CSharp
+    - Name: itemData
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[LDS.Data.ItemData, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 2|LDS.Data.ItemData, Assembly-CSharp
+    - Name: itemId
+      Entry: 3
+      Data: 1
+    - Name: quantity
+      Entry: 3
+      Data: 10000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|LDS.Data.ItemData, Assembly-CSharp
+    - Name: itemId
+      Entry: 3
+      Data: 2
+    - Name: quantity
+      Entry: 3
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|LDS.Data.ItemData, Assembly-CSharp
+    - Name: itemId
+      Entry: 3
+      Data: 101
+    - Name: quantity
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|LDS.Data.ItemData, Assembly-CSharp
+    - Name: itemId
+      Entry: 3
+      Data: 100
+    - Name: quantity
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|LDS.Data.ItemData, Assembly-CSharp
+    - Name: itemId
+      Entry: 3
+      Data: 1000
+    - Name: quantity
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: onSaveGame
+      Entry: 6
+      Data: 
+    - Name: onLoadGame
+      Entry: 6
+      Data: 
+  saveFilename: LDS_Save
+  itemDB: {fileID: 11400000, guid: b84e5cc89cb88ad448bb30290123e800, type: 2}
+  inventory: {fileID: 11400000, guid: 601f3c106c8973844914340942a4098e, type: 2}
