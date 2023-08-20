@@ -15,12 +15,12 @@ MonoBehaviour:
   folderPath: E:/Unity Project/Last Day Survival/Last-Day-Survival/Assets/Scenes
   allowSubfolders: 0
   scenes:
-  - name: DemoScene
-    path: Assets/Scenes\DemoScene.unity
+  - name: CampScene
+    path: Assets/Scenes\CampScene.unity
     parentFolder: Scenes
-  - name: SampleScene
-    path: Assets/Scenes\SampleScene.unity
+  - name: GamePlayScene
+    path: Assets/Scenes\GamePlayScene.unity
     parentFolder: Scenes
-  - name: Scene
-    path: Assets/Scenes\Scene.unity
+  - name: PersistentManagers
+    path: Assets/Scenes\PersistentManagers.unity
     parentFolder: Scenes

@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Core.UtilitySO
@@ -5,9 +6,8 @@ namespace Core.UtilitySO
     /// <summary>
     /// Base class for ScriptableObjects that need a public description field.
     /// </summary>
-    public class DescriptionBaseSO : ScriptableObject
+    public class DescriptionBaseSO : SerializedScriptableObject
     {
-        [SerializeField]
-        [field: TextArea] public string description { get; private set; }
+        [field: TextArea] public string description;
     }
 }

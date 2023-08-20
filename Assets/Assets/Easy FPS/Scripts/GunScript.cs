@@ -335,8 +335,11 @@ public class GunScript : MonoBehaviour {
 	/*
 	 * Checking if the gun is automatic or nonautomatic and accordingly runs the ShootMethod();.
 	 */
-	void Shooting(){
-
+	public static bool isCanShoot = true;
+	void Shooting()
+	{
+		if (!isCanShoot) return;
+			
 		if (!meeleAttack) {
 			if (currentStyle == GunStyles.nonautomatic) {
 				if (Input.GetButtonDown ("Fire1")) {
@@ -513,7 +516,9 @@ public class GunScript : MonoBehaviour {
 	 */
 	[Tooltip("HUD bullets to display bullet count on screen. Will be find under name 'HUD_bullets' in scene.")]
 	public TextMesh HUD_bullets;
-	void OnGUI(){
+	void OnGUI()
+	{
+		if (!isCanShoot) return;
 		if(!HUD_bullets){
 			try{
 				HUD_bullets = GameObject.Find("HUD_bullets").GetComponent<TextMesh>();

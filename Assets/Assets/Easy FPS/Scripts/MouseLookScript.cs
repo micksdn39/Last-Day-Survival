@@ -18,8 +18,11 @@ public class MouseLookScript : MonoBehaviour {
 	* Locking the mouse if pressing L.
 	* Triggering the headbob camera omvement if player is faster than 1 of speed
 	*/
+	public bool isMouseMove = true;
 	void  Update(){
 
+		if(!isMouseMove) return;
+		
 		MouseInputMovement();
 
 		if (Input.GetKeyDown (KeyCode.L)) {
@@ -67,6 +70,8 @@ public class MouseLookScript : MonoBehaviour {
 * If aiming set the mouse sensitvity from our variables and vice versa.
 */
 void FixedUpdate(){
+	
+	if(!isMouseMove) return;
 
 	/*
 	 * Reduxing mouse sensitvity if we are aiming.

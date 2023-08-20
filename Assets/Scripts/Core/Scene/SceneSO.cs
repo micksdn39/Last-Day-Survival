@@ -1,23 +1,25 @@
 using System;
 using Core.UtilitySO;
+using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 namespace Core.Scene
 { 
+    public enum GameSceneType
+    { 
+        Default = 0,
+        Menu = 1, 
+        PersistentManagers = 2,
+        Gameplay = 3, 
+    } 
+    
     [CreateAssetMenu(fileName = "NewGameScene", menuName = "Scene Data/GameScene")]
     public class SceneSO : DescriptionBaseSO
     {
-        public enum GameSceneType
-        { 
-            Default = 0,
-            Menu = 1, 
-            PersistentManagers = 2,
-            Gameplay = 3, 
-        } 
-       [SerializeField] public GameSceneType sceneType { get; private set; }
-       [SerializeField] public AssetReference sceneReference { get; private set; }
+        [OdinSerialize] public GameSceneType sceneType { get; private set; }
+        [SerializeField] private AssetReference sceneReference;
 
        private string sceneName => sceneReference.Asset.name;
 
